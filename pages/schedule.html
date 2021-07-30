@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/f0b9136e4d.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link
+      rel="stylesheet"
+      href="../assets/fullcalendar-scheduler/lib/fullcalendar.css"
+    />
+    <title>SHREDZ - Schedule</title>
+  </head>
+  <body>
+    <header>
+      <!-- sample navbar (Replace this with Vlad's Navbar) -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-dark sticky-top"> <!-- -->
+          
+        <!-- Logo = Link to Home -->
+        <a class="navbar-brand text-white" href="..\index.html"><img src="../assets/logo/shredz_logo.svg" width="140px"></a>
+
+        <!-- Hamburger Menu Toggle -->
+        <button class="navbar-toggler bg-white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <!-- Navbar Items (collapsable)-->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto justify-content-center">
+
+            <li class="nav-item text-center">
+              <a class="btn btn-outline-light border border-dark rounded mx-2 w-150" href="program.html">Programs</a>
+            </li>
+            
+            <li class="nav-item text-center">
+                <a class="btn btn-outline-light border border-dark rounded mx-2 w-150" href="MeetOurTeam.html">Our Team</a>
+              </li>
+              
+            <li class="nav-item text-center">
+                <a class="btn btn-outline-light border border-dark rounded mx-2 w-150" href="schedule.html">Book Sessions</a>
+              </li>
+              
+            <li class="nav-item text-center">
+                <a class="btn btn-outline-light border border-dark rounded mx-2 w-150" href="contact.html">Contact</a>
+              </li>
+
+              <li class="nav-item text-center">
+                <a
+                  class="btn btn-outline-light border border-dark rounded mx-2 w-150"
+                  href="login.html"
+                  >LogIn/Register</a
+                >
+              </li>
+            <li class="nav-item text-center">
+              <a class="btn btn-outline-light border border-dark rounded mx-2 w-150" href="cart.html"><i class="fas fa-shopping-cart fa-lg"></i><span class="nav-cart-count">0</span></a>
+            </li>
+          </ul>
+        </div>
+       </nav>
+      <!-- end navbar -->
+    </header>
+    <main>
+      <!-- Calendar -->
+      <div class="calendar">
+        <div class="calendar__wrapper">
+          <div class="calendar__sidebar">
+            <span class="calendar__text--title">SHREDZ SCHEDULE</span>
+            <!-- <div class="calendar__filter-wrapper">
+              <span class="calendar__text--subtitle"
+                >Filter <i class="fas fa-filter"></i
+              ></span>
+              <div class="calendar__filter-item">
+                <button class="calendar__filter-btn">
+                  <i class="fas fa-plus"></i> Yoga
+                </button>
+                <button class="calendar__filter-btn">
+                  <i class="fas fa-plus"></i> Muay Thai
+                </button>
+                <button class="calendar__filter-btn">
+                  <i class="fas fa-plus"></i> Ju Jitsu
+                </button>
+                <button class="calendar__filter-btn">
+                  <i class="fas fa-plus"></i> program 4
+                </button>
+                <button class="calendar__filter-btn">
+                  <i class="fas fa-plus"></i> program 5
+                </button>
+              </div>
+            </div> -->
+          </div>
+          <div id="calendar" class="fc-media-screen"></div>
+        </div>
+      </div>
+      <!-- Bootstrap Modal -->
+      <div class="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Modal title</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Modal body text goes here.</p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" class="btn btn-primary">
+                Book session
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- End of Calendar -->
+
+    <footer>
+      <div class="footer">
+        <div class="footer__block">
+          <div class="text-center footer__button">
+            <a
+              href="/pages/login.html"
+              class="btn btn-sm btn-dark"
+              style="color: white"
+              >SIGN UP TODAY</a
+            >
+          </div>
+        </div>
+
+        <div class="footer__block text-center">
+          <div class="footer__nav">
+            <p><a href="../index.html">Home</a></p>
+            <p><a href="program.html">Program</a></p>
+            <p><a href="MeetOurTeam.html">Our Team</a></p>
+            <p><a href="schedule.html">Book Session</a></p>
+            <p><a href="contact.html">Contact</a></p>
+          </div>
+        </div>
+
+        <div class="footer__block">
+          <!-- social media -->
+          <div class="footer__detail text-center">
+            <div class="footer__detail-icons">
+              <a href="https://www.facebook.com/"
+                ><i class="fab fa-facebook fa-2x footer__detail-icon mx-1"></i
+              ></a>
+              <a href="https://www.instagram.com/russtelen/"
+                ><i class="fab fa-instagram fa-2x footer__detail-icon mx-1"></i
+              ></a>
+              <a href="https://www.twitter.com/"
+                ><i class="fab fa-twitter fa-2x footer__detail-icon mx-1"></i
+              ></a>
+              <a href="https://www.youtube.com"
+                ><i class="fab fa-youtube fa-2x footer__detail-icon mx-1"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- FullCalendar JS script -->
+    <script src="../assets/fullcalendar-scheduler/lib/main.js"></script>
+    <!-- FontAwesome -->
+    <script
+      src="https://kit.fontawesome.com/001a8c6911.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- JS Script -->
+    <script src="../scripts/schedule.js"></script>
+    <script src="../scripts/cart.js"></script>
+  </body>
+</html>

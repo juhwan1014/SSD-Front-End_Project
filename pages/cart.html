@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/main.css" />
+    <title>SHREDZ:Cart</title>
+</head>
+<body>
+    <header class="stick">
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark sticky-top"> <!-- -->
+          
+          <!-- Logo = Link to Home -->
+          <a class="navbar-brand text-white" href="..\index.html"><img src="../assets/logo/shredz_logo.svg" width="140px"></a>
+  
+          <!-- Hamburger Menu Toggle -->
+          <button class="navbar-toggler bg-white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <!-- Navbar Items (collapsable)-->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto justify-content-center">
+  
+              <li class="nav-item text-center">
+                <a class="btn btn-outline-light border border-dark rounded mx-2 w-150" href="program.html">Programs</a>
+              </li>
+              
+              <li class="nav-item text-center">
+                  <a class="btn btn-outline-light border border-dark rounded mx-2 w-150" href="MeetOurTeam.html">Our Team</a>
+                </li>
+                
+              <li class="nav-item text-center">
+                  <a class="btn btn-outline-light border border-dark rounded mx-2 w-150" href="schedule.html">Book Sessions</a>
+                </li>
+                
+              <li class="nav-item text-center">
+                  <a class="btn btn-outline-light border border-dark rounded mx-2 w-150" href="contact.html">Contact</a>
+                </li>
+  
+                <li class="nav-item text-center">
+                  <a
+                    class="btn btn-outline-light border border-dark rounded mx-2 w-150"
+                    href="login.html"
+                    >LogIn/Register</a
+                  >
+                </li>
+              <li class="nav-item text-center">
+                <a class="btn btn-outline-light border border-dark rounded mx-2 w-150" href="cart.html"><i class="fas fa-shopping-cart fa-lg"></i><span class="nav-cart-count">0</span></a>
+              </li>
+            </ul>
+          </div>
+         </nav>
+    </header>
+
+    <main class="cart-main">
+
+        <!-- RECOMMENDED FOR YOU -->
+        <h2 class="cart-h2">Recommended For You</h2>
+        <div class="recommended item_container">
+          <div class="recommended__card" id="recommended1">
+            <!-- <img src="../images/landing/program-muaythai.jpg" alt="muay_thai" width="60px"> -->
+            <h4 class="recommended__title">Muay Thai</h4>
+            <h4 class="recommended__price">$12.00</h4>
+            <h4 class="add-cart cart1"><i class="fas fa-plus fa-sm"></i><i class="fas fa-shopping-cart fa-sm"></i></h4> 
+          </div>
+          <div class="recommended__card" id="recommended2">
+            <!-- <img src="../images/landing/program-yoga.jpg" alt="yoga" width="60px"> -->
+            <h4 class="recommended__title">Yoga</h4>
+            <h4 class="recommended__price">$8.00</h4>
+            <h4 class="add-cart cart2"><i class="fas fa-plus fa-sm"></i><i class="fas fa-shopping-cart fa-sm"></i></i></h4> 
+          </div>
+          <div class="recommended__card" id="recommended3">
+            <!-- <img src="../images/landing/program-hiit.jpg" alt="hiit" width="60px"> -->
+            <h4 class="recommended__title">HIIT</h4>
+            <h4 class="recommended__price">$10.00</h4>
+            <h4 class="add-cart cart3"><i class="fas fa-plus fa-sm"></i><i class="fas fa-shopping-cart fa-sm"></i></h4> 
+          </div>
+        </div>
+
+        <!-- Cart Items - populated crom JS -->
+        <section class="cart">
+           <h2 class="cart-h2">Your Cart</h2>
+            <section class="cart-item-container">
+
+            </section> <!-- class="cart-item-container"-->
+        </section> <!-- class="cart"-->
+        <div class="checkout">
+          
+          <section class="checkout__validate">
+            <h2 class="cart-h2">Checkout</h2>
+            <div class="checkout__login">
+              <!-- <img src="/assets/logo/shredz_logo.svg" width="200px"> -->
+              <label id="error-login" class="error-message"></label>
+              <label for="email">Username</label>
+              <input type="email" id="checkout-validate__email" placeholder="Enter username">
+              <label for="password">Password</label>
+              <input type="password" id="checkout-validate__password" placeholder="Enter password">
+              <!-- remember me -->
+              <div class="checkout__login-remember">
+                <input id="checkout-rememberme" type="checkbox">
+                <label id="checkout-rememberme-label">Remember me</label>
+              </div>
+              <!-- buttons (Login & Signup) -->
+              <div class="checkout__buttons">
+                <button class="button" id="login" type="button">Log-In</button>
+                <a href="login.html"><button class="button" id="register" type="button">Sign-Up</button></a>
+              </div>
+            </div>
+          </section>
+
+          <!-- CONFIRM PURCHASE -->
+          <section class="checkout__confirm">
+              <h2 class="cart-h2">Complete Your Order</h2>      
+              <div class="checkout-confirm__item">
+                  <div id="checkout-confirm__items-in-cart"></div> <!-- targeting this div in cart.js to display Checkout confirm items-->
+                  <!-- Checkout form (FIRST ATTEMPT--> 
+                  <div class="row">
+                    <div class="col-md-8 order-md-1">
+                      <h4 class="mb-3">Billing address</h4>
+                      <form class="needs-validation" novalidate="">
+                        <div class="row">
+                          <div class="col-md-6 mb-3">
+                            <label for="firstName">First name</label>
+                            <input type="text" class="form-control is-valid is-valid" id="firstName" placeholder="" value="" required/>
+                            <div class="invalid-feedback">
+                              Valid first name is required.
+                            </div>
+                          </div>
+                          <div class="col-md-6 mb-3">
+                            <label for="lastName">Last name</label>
+                            <input type="text" class="form-control is-valid" id="lastName" placeholder="" value="" required/>
+                            <div class="invalid-feedback">
+                              Valid last name is required.
+                            </div>
+                          </div>
+                        </div>
+                  
+                        <div class="mb-3">
+                          <label for="username">Username</label>
+                          <div class="input-group">
+                            <input type="text" class="form-control is-valid" id="username" placeholder="Username" required/>
+                            <div class="invalid-feedback" style="width: 100%;">
+                              Your username is required.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="address">Address</label>
+                          <input type="text" class="form-control is-valid" id="address" placeholder="1234 Main St" required/>
+                          <div class="invalid-feedback">
+                            Please enter your shipping address.
+                          </div>
+                        </div>                  
+                        <div class="row">
+                          <div class="col-md-5 mb-3">
+                            <label for="country">Country</label>
+                            <select class="custom-select d-block w-100" id="country" required/>
+                              <option value="">Choose...</option>
+                              <option>Canada</option>
+                            </select>
+                            <div class="invalid-feedback">
+                              Please select a valid country.
+                            </div>
+                          </div>
+                          <div class="col-md-4 mb-3">
+                            <label for="state">Province</label>
+                            <select class="custom-select d-block w-100" id="state" required/>
+                              <option value="">Choose...</option>
+                              <option>Alberta</option>
+                              <option>British Columbia</option>
+                              <option>Saskatchewan</option>
+                              <option>Manitoba</option>
+                              <option>Ontario</option>
+                              <option>Quebec</option>
+                              <option>Newfoundland & Labrador</option>
+                              <option>New Brunswick</option>
+                              <option>Nova Scotia</option>
+                              <option>Prince Edward Island</option>
+                              <option>Yukon</option>
+                              <option>Nunavut</option>
+                              <option>Northwest Teritories</option>
+                            </select>
+                            <div class="invalid-feedback">
+                              Please provide a valid state.
+                            </div>
+                          </div>
+                          <div class="col-md-3 mb-3">
+                            <label for="postal">Postal Code</label>
+                            <input type="text" class="form-control is-valid" id="postal" placeholder="" required/>
+                            <div class="invalid-feedback">
+                              Postal Code required.
+                            </div>
+                          </div>
+                        </div>
+                        <hr class="mb-4">
+                        <h4 class="mb-3">Payment</h4>
+
+                        <div class="d-block my-3">
+                          <div class="custom-control custom-radio">
+                            <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked="" required/>
+                            <label class="custom-control-label" for="credit">Credit card</label>
+                          </div>
+                          <div class="custom-control custom-radio">
+                            <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required/>
+                            <label class="custom-control-label" for="debit">Debit card</label>
+                          </div>
+                          <div class="custom-control custom-radio">
+                            <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required/>
+                            <label class="custom-control-label" for="paypal">Paypal</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-6 mb-3">
+                            <label for="cc-name">Name on card</label>
+                            <input type="text" class="form-control is-valid" id="cc-name" placeholder="" required/>
+                            <small class="text-muted">Full name as displayed on card</small>
+                            <div class="invalid-feedback">
+                              Name on card is required
+                            </div>
+                          </div>
+                          <div class="col-md-6 mb-3">
+                            <label for="cc-number">Credit card number</label>
+                            <input type="text" class="form-control is-valid" id="cc-number" placeholder="" required/>
+                            <div class="invalid-feedback">
+                              Credit card number is required
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-3 mb-3">
+                            <label for="cc-expiration">Expiration</label>
+                            <input type="text" class="form-control is-valid" id="cc-expiration" placeholder="" required/>
+                            <div class="invalid-feedback">
+                              Expiration date required
+                            </div>
+                          </div>
+                          <div class="col-md-3 mb-3">
+                            <label for="cc-expiration">CVV</label>
+                            <input type="text" class="form-control is-valid" id="cc-cvv" placeholder="" required/>
+                            <div class="invalid-feedback">
+                              Security code required
+                            </div>
+                          </div>
+                        </div>
+                        <hr class="mb-4">
+                        <button class="complete-order btn btn-primary btn-lg btn-block" type="submit">Complete Order</button>
+                        <!-- <button class="checkout-confirm__button" id="complete" type="button">Complete Your Order</button> -->
+                      </form>
+                    </div>
+                  </div>
+                  <!-- <label class="checkout-confirm__subtotal">Subtotal: $<span class="confirm_subtotal"></span> </label> -->
+
+
+                    <!-- <label id="error-checkout" class="error-message"></label> -->
+                </div>
+          </section>
+
+          <!-- PURCHASE COMPLETED -->
+          <section class="checkout__complete">
+            <h2 class="cart-h2">Thank You for your Order!</h2>
+            
+            <div class="checkout-complete__item">
+            </div>
+          </section>
+        </div>
+
+    </main>
+
+    <footer> 
+      <div class="footer">
+        <div class="footer__block">
+          <div class="text-center footer__button">
+            <a href="pages/login.html" class="btn btn-sm btn-dark" style="color:white;">SIGN UP TODAY</a>
+          </div>
+        </div>
+
+        <div class="footer__block text-center">
+          <div class="footer__nav">
+            <p><a href="../index.html">Home</a></p>
+            <p><a href="program.html">Program</a></p>
+            <p><a href="MeetOurTeam.html">Our Team</a></p>
+            <p><a href="schedule.html">Book Session</a></p>
+            <p><a href="contact.html">Contact</a></p>
+          </div>
+        </div>
+
+        <div class="footer__block">            
+          <!-- social media -->
+          <div class="footer__detail text-center">
+            <div class="footer__detail-icons">
+              <a href="https://www.facebook.com/"><i class="fab fa-facebook fa-2x footer__detail-icon mx-1"></i></a> 
+              <a href="https://www.instagram.com/russtelen/"><i class="fab fa-instagram fa-2x footer__detail-icon mx-1"></i></a>
+              <a href="https://www.twitter.com/"><i class="fab fa-twitter fa-2x footer__detail-icon mx-1"></i></a>
+              <a href="https://www.youtube.com"><i class="fab fa-youtube fa-2x footer__detail-icon mx-1"></i></a>
+            </div>   
+          </div>
+        </div>
+      </div>
+    </footer> 
+
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/001a8c6911.js" crossorigin="anonymous"></script>
+    <!-- ScrollMagic -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js" integrity="sha512-HzAEuXwhLxwm/Jj+5ecdjzrRVrjuh2ZeIxyT1Ln37TO5pWNMnKBuU7cfd1wvRQ/k86w1oC174Yk1T7aRlBpIcA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js" integrity="sha512-Ey+nIg+Ue8gUAaCNjR1KHR8nwDjWn9QXoQbynR/X+V66s6u1oqynnuRQ8zSgg5f5gBNb2Bzsu1pItCi3sPkbfA==" crossorigin="anonymous"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../scripts/cart.js"></script>
+    <!-- <script src="../scripts/scripts.js"></script> -->
+  </body>
+</html>

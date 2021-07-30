@@ -1,0 +1,204 @@
+.team {
+  &__jumbotron {
+    background-image: linear-gradient($black-50-opacity),
+      url(../images/team1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 720px;
+    @include flex-center-column;
+  }
+  &__jumbotron-header {
+    @include header(64px, 60px);
+    color: $white;
+  }
+  &__jumbotron-text-wrapper {
+    @include wrapper;
+    @include space-out;
+  }
+  &__text {
+    @include subheader(24px, 24px);
+    color: $white;
+  }
+}
+.team-cover {
+  position: absolute;
+
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  @include mobile {
+    height: 80vh;
+  }
+
+  @include tablet {
+    height: 120vh;
+  }
+  @include desktop {
+    height: 150vh;
+  }
+}
+
+.team_content {
+  position: absolute;
+  text-align: center;
+  align-items: center;
+  color: white;
+  z-index: 2;
+  text-align: center;
+  .btn-outline-light {
+    padding: 20px;
+    margin-top: 80px;
+
+    @include mobile {
+      font-size: 10px;
+    }
+
+    @include tablet {
+      font-size: 20px;
+    }
+
+    @include desktop {
+      font-size: 30px;
+    }
+  }
+}
+
+.team_info {
+  margin-top: 50px;
+  @include mobile {
+    margin-top: -30px;
+  }
+}
+.team_title {
+  @include mobile {
+    font-size: 1.5rem;
+  }
+
+  @include tablet {
+    font-size: 3rem;
+  }
+
+  @include desktop {
+    font-size: 4.5rem;
+  }
+}
+
+.info1 {
+  padding: 50px;
+  @include mobile {
+    font-size: 1rem;
+    margin-top: -65px;
+  }
+
+  @include tablet {
+    font-size: 1rem;
+    margin-top: 0px;
+  }
+
+  @include desktop {
+    font-size: 1.6rem;
+    margin-top: 0px;
+  }
+}
+
+.info2 {
+  @include desktop {
+    font-size: 1rem;
+    display: contents;
+  }
+  @include mobile {
+    font-size: 0.5rem;
+    display: none;
+  }
+
+  @include tablet {
+    font-size: 1rem;
+    display: contents;
+  }
+}
+
+.team2 > h2 {
+  padding-top: 70px;
+  @include mobile {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  @include tablet {
+    font-size: 2.5rem;
+    text-align: left;
+  }
+
+  @include desktop {
+    font-size: 3.5rem;
+    text-align: left;
+  }
+}
+
+.team-wrapper {
+  @include wrapper;
+}
+
+.row {
+  @include space-out;
+  .card-img {
+    margin-top: 100px;
+    width: 400px;
+    height: 500px;
+    border-radius: 10%;
+
+    @include mobile {
+      width: 300px;
+      height: 400px;
+      align-items: center;
+    }
+
+    @include tablet {
+      width: 300px;
+      height: 350px;
+    }
+
+    @include desktop {
+      width: 400px;
+      height: 500px;
+    }
+  }
+
+  .card-body {
+    margin-top: 20px;
+    margin-left: -200px;
+    @include mobile {
+      margin-left: 0px;
+    }
+
+    @include tablet {
+    }
+
+    @include desktop {
+    }
+  }
+
+  .card-title {
+    font-family: "Roboto-Demi";
+    padding: 20px;
+    @include mobile {
+      font-size: 1em;
+      text-align: center;
+    }
+
+    @include tablet {
+      font-size: 1.5em;
+      text-align: left;
+    }
+
+    @include desktop {
+      font-size: 2.5em;
+      text-align: left;
+    }
+  }
+
+  .card-text {
+    font-family: "OpenSan-Regular";
+  }
+}

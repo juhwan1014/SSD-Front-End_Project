@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>SHREDZ</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/f0b9136e4d.js" crossorigin="anonymous"></script>
+
+    <!-- Slick CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" />
+    
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit-icons.min.js"></script>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+
+  </head>
+  <body>
+     <!-- header -->
+      <header>
+        <!-- sample navbar (Replace this with Vlad's Navbar) -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark sticky-top"> <!-- -->
+          
+          <!-- Logo = Link to Home -->
+          <a class="navbar-brand text-white" href="index.html"><img src="../assets/logo/shredz_logo.svg" width="140px"></a>
+  
+          <!-- Hamburger Menu Toggle -->
+          <button class="navbar-toggler bg-white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <!-- Navbar Items (collapsable)-->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto justify-content-center">
+  
+              <li class="nav-item text-center">
+                <a class="btn btn-outline-light border border-dark rounded mx-2 w-150" href="pages/program.html">Programs</a>
+              </li>
+              
+              <li class="nav-item text-center">
+                  <a class="btn btn-outline-light border border-dark rounded mx-2 w-150" href="pages/MeetOurTeam.html">Our Team</a>
+                </li>
+                
+              <li class="nav-item text-center">
+                  <a class="btn btn-outline-light border border-dark rounded mx-2 w-150" href="pages/schedule.html">Book Sessions</a>
+                </li>
+                
+              <li class="nav-item text-center">
+                  <a class="btn btn-outline-light border border-dark rounded mx-2 w-150" href="pages/contact.html">Contact</a>
+                </li>
+  
+                <li class="nav-item text-center">
+                  <a
+                    class="btn btn-outline-light border border-dark rounded mx-2 w-150"
+                    href="pages/login.html"
+                    >LogIn/Register</a
+                  >
+                </li>
+              <li class="nav-item text-center">
+                <a class="btn btn-outline-light border border-dark rounded mx-2 w-150" href="pages/cart.html"><i class="fas fa-shopping-cart fa-lg"></i><span class="nav-cart-count">0</span></a>
+              </li>
+            </ul>
+          </div>
+         </nav>
+        <!-- end navbar -->
+
+
+        <!-- banner (Add background image using CSS)-->
+        <div class="jumbotron">
+          <h1 class="display-4">COME GET SHREDDED WITH SHREDZ</h1>
+          <p class="lead">Begin your journey today</p>
+          <br>
+            <a class="btn btn-light btn-lg" href="pages/login.html" role="button">Try a class for free</a>
+          </p>
+        </div>
+        <!-- end banner -->
+      </header>
+
+
+      <!-- main section STARTS here (wrap this in a container) -->
+      <main>
+        <div class="landing">
+          <!-- <div uk-scrollspy="cls:uk-animation-fade"> -->
+            <!-- START begin your journey section -->
+              <p class="landing__title" uk-scrollspy="cls: uk-animation-slide-left; repeat: true">BEGIN YOUR JOURNEY</p>
+              <section class="landing__journies" uk-scrollspy="cls: uk-animation-slide-right; target: .landing__journey; delay: 300; repeat: true">
+                <!-- step 1 -->
+                <div  class="landing__journey">
+                  <i class="fas fa-user-plus fa-3x"></i>
+                  <h2 class="landing__text-header">Step 1</h2> 
+                  <h3 class="landing__text-subheader">REGISTER</h3>
+                </div>
+
+                <!-- step 2 -->
+                <div class="landing__journey"> 
+                  <i class="far fa-calendar-alt fa-3x"></i>
+                  <h2 class="landing__text-header">Step 2</h2> 
+                  <h3 class="landing__text-subheader">BOOK A CLASS</h3>
+                </div>
+
+                <!-- step 3 -->
+                <div class="landing__journey"> 
+                  <i class="fas fa-dumbbell fa-3x"></i>
+                  <h2 class="landing__text-header">Step 3</h2> 
+                  <h3 class="landing__text-subheader">GET SHREDDED</h3>
+                </div>
+              </section>
+
+              <div class="text-center">
+                <a href="pages/login.html" class="btn btn-lg btn-dark" style="color:white;">START TODAY</a>
+              </div>
+          <!-- </div> -->
+          
+        
+        <!-- END begin your journey section -->
+        <hr>
+        <!-- START our program section -->
+        <p class="landing__title">Our Programs</p>
+        <section class="landing__programs">
+          <div class="landing__program-row1" uk-scrollspy="cls: uk-animation-slide-top; target: .landing__program; delay: 100; repeat: true">
+            <!-- program 1 -->
+            <div class="landing__program">
+              <figure class="snip1321"><img class="landing__program-img" src="images/landing/program-yoga.jpg" alt="yoga program"/>
+                <figcaption>
+                  <h4 class="landing__text-header">Yoga</h4>
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In perferendis dolor quos nostrum ipsum, illum expedita labore magnam unde quia officia deleniti. Rem ea cum provident tempora qui magni</p>
+                </figcaption><a href="pages/program.html"></a>
+              </figure>
+              <h4 class="landing__text-header">YOGA</h4>
+            </div>
+
+            <!-- program 2 -->
+            <div class="landing__program">
+              <figure class="snip1321"><img class="landing__program-img" src="images/landing/program-muaythai.jpg" alt="muay thai program">
+                <figcaption>
+                  <h4 class="landing__text-header">Muay Thai</h4>
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In perferendis dolor quos nostrum ipsum, illum expedita labore magnam unde quia officia deleniti. Rem ea cum provident tempora qui magni</p>
+                </figcaption><a href="pages/program.html"></a>
+              </figure>
+              <h4 class="landing__text-header">Muay Thai</h4>
+            </div>
+
+            <!-- program 3 -->
+            <div class="landing__program">
+              <figure class="snip1321"><img class="landing__program-img" src="images/landing/program-jiujitsu.jpg" alt="jiujitsu program">
+                <figcaption>
+                  <h4 class="landing__text-header">Jiu Jitsu</h4>
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In perferendis dolor quos nostrum ipsum, illum expedita labore magnam unde quia officia deleniti. Rem ea cum provident tempora qui magni</p>
+                </figcaption><a href="pages/program.html"></a>
+              </figure>
+              <h4 class="landing__text-header">Jiu Jitsu</h4>
+            </div>
+          </div>
+
+          <div class="landing__program-row2" uk-scrollspy="cls: uk-animation-slide-bottom; target: .landing__program; delay: 100; repeat: true">
+            <!-- program 4 -->
+            <div class="landing__program">
+              <figure class="snip1321"><img class="landing__program-img" src="images/landing/program-zumba.jpg" alt="zumba program">
+                <figcaption>
+                  <h4 class="landing__text-header">Zumba</h4>
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In perferendis dolor quos nostrum ipsum, illum expedita labore magnam unde quia officia deleniti. Rem ea cum provident tempora qui magni</p>
+                </figcaption><a href="pages/program.html"></a>
+              </figure>
+              <h4 class="landing__text-header">Zumba</h4>
+            </div>
+
+            <!-- program 5 -->
+            <div class="landing__program">
+              <figure class="snip1321"><img class="landing__program-img" src="images/landing/program-hiit.jpg" alt="HIIT program">
+                <figcaption>
+                  <h4 class="landing__text-header">HIIT Cardio</h4>
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In perferendis dolor quos nostrum ipsum, illum expedita labore magnam unde quia officia deleniti. Rem ea cum provident tempora qui magni</p>
+                </figcaption><a href="pages/program.html"></a>
+              </figure>
+              <h4 class="landing__text-header">HIIT Cardio</h4>
+            </div>
+            
+            <!-- program 6 -->
+            <div class="landing__program">
+              <figure class="snip1321"><img class="landing__program-img" src="images/landing/program-females.jpg" alt="females only program">
+                <figcaption>
+                  <h4 class="landing__text-header">Females Only</h4>
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In perferendis dolor quos nostrum ipsum, illum expedita labore magnam unde quia officia deleniti. Rem ea cum provident tempora qui magni</p>
+                </figcaption><a href="pages/program.html"></a>
+                <h4 class="landing__text-header">Females Only</h4>
+              </figure>
+            </div>
+          </div>  
+        </section>
+        <!-- END our program section -->
+        <br>
+        <hr>
+        <!-- START join the shredz fam section -->
+        <section class="landing__family">
+          <p class="landing__title">Join the Shredz Family</p>
+            <div class="landing__family-carousel responsive"> <!-- make this into a carousel-->
+              <img src="images/landing/carousel8.jpg" alt="shredz family picture">
+              <img src="images/landing/carousel2.jpg" alt="female ropes exercise">
+              <img src="images/landing/carousel1.jpg" alt="female back workout">
+              <img src="images/landing/carousel7.jpg" alt="shredz family team">
+              <img src="images/landing/carousel9.jpg" alt="stretching">
+              <img src="images/landing/carousel4.jpg" alt="female kickboxing">
+              <img src="images/landing/carousel6.jpg" alt="rope exercise">
+              <img src="images/landing/carousel5.jpg" alt="jiujitsu">
+              <img src="images/landing/carousel3.jpg" alt="heavy bag hitting">
+            </div>
+
+          <div class="landing__title" uk-scrollspy="cls: uk-animation-slide-top; target: p; delay: 400; repeat: true">
+            <p>Follow us on  <a class="text-dark" href="https://www.instagram.com/russtelen/">Instagram! <i class="fab fa-instagram"></i></a> </p>
+          </div>   
+        </section>
+        <!-- END join the shredz fam section -->
+
+      </main>
+
+      <footer> 
+        <div class="footer">
+          <div class="footer__block">
+            <div class="text-center footer__button">
+              <a href="/pages/login.html" class="btn btn-sm btn-dark" style="color:white;">SIGN UP TODAY</a>
+            </div>
+          </div>
+
+          <div class="footer__block text-center">
+            <div class="footer__nav">
+              <p><a href="index.html">Home</a></p>
+              <p><a href="pages/program.html">Program</a></p>
+              <p><a href="pages/MeetOurTeam.html">Our Team</a></p>
+              <p><a href="pages/schedule.html">Book Session</a></p>
+              <p><a href="pages/contact.html">Contact</a></p>
+            </div>
+          </div>
+
+          <div class="footer__block">            
+            <!-- social media -->
+            <div class="footer__detail text-center">
+              <div class="footer__detail-icons">
+                <a href="https://www.facebook.com/"><i class="fab fa-facebook fa-2x footer__detail-icon mx-1"></i></a> 
+                <a href="https://www.instagram.com/russtelen/"><i class="fab fa-instagram fa-2x footer__detail-icon mx-1"></i></a>
+                <a href="https://www.twitter.com/"><i class="fab fa-twitter fa-2x footer__detail-icon mx-1"></i></a>
+                <a href="https://www.youtube.com"><i class="fab fa-youtube fa-2x footer__detail-icon mx-1"></i></a>
+              </div>   
+            </div>
+          </div>
+        </div>
+      </footer>    
+ 
+    <!-- jQuery first, then Popper.js, Bootstrap JS, Slick JS, Landing JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous"></script>
+    <script src="scripts/landing.js"></script>
+    <script src="scripts/cart.js"></script>
+  </body>
+</html>
+
